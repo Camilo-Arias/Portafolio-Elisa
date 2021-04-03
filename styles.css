@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --font: 'Oxygen', sans-serif;
   --primary: #42E2BB;
@@ -241,7 +245,40 @@ input::-webkit-input-placeholder {
   text-align: center;
 }
 
+/* this media is for hide logo and menu in mobile design */
+@media screen and (max-width: 768px) {
+  .footer .logo, .nav{
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
+
+  .header {
+    background: linear-gradient(80deg, #FAD7A1 0%, #E96D71 500%);
+    z-index: 1;
+    position: sticky;
+    inset-block-start: 0;
+  }
+
+  .header a {
+    color: gray;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--black);
+  }
+
+  .nav {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .nav a:nth-child(2), .nav a:nth-child(3) {
+    margin-inline-start: 40px;
+  }
+
   .hero-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -327,5 +364,23 @@ input::-webkit-input-placeholder {
     /* box-shadow: 0 0 20px red; */
     display: block;
     text-align: center;
+    font-size: 1.5em;
   }
 }
+
+  @media screen and (min-width: 1144px) {
+    .footer .footer-content-message, .footer {
+      display: flex;
+    }
+
+    .footer {
+      flex-direction: row-reverse;
+      padding-inline: 69px;
+      justify-content: space-between;
+    }
+
+    .footer .logo {
+      border-radius: 50%;
+      margin-inline-end: 190px;
+    }
+  }
