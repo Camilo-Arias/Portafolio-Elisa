@@ -369,6 +369,7 @@ input::-webkit-input-placeholder {
 }
 
   @media screen and (min-width: 1144px) {
+
     .footer .footer-content-message, .footer {
       display: flex;
     }
